@@ -13,6 +13,7 @@ RUN npm install
 
 # Copy the remaining backend files to the container
 COPY . .
+RUN ls -a
 
 # Expose the container port
 EXPOSE 3001
