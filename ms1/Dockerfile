@@ -6,13 +6,14 @@ WORKDIR /app
 
 # Copy the package.json and package-lock.json files to the container
 COPY package*.json ./
-RUN rm -rf node_modules
+#RUN rm -rf node_modules
 
 # Install the dependencies
 RUN npm install
 
 # Copy the remaining backend files to the container
 COPY . .
+COPY server.js
 RUN ls -a
 
 # Expose the container port
