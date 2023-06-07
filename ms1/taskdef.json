@@ -1,9 +1,8 @@
-{
-    "taskDefinitionArn": "arn:aws:ecs:ap-south-1:651622532734:task-definition/backend-ms1-taskdef:1",
+"family": "backend-ms1-taskdef",
     "containerDefinitions": [
         {
             "name": "ms1",
-            "image": "%REPOSITORY_URI%:v_%BUILD_NUMBER%",
+            "image": "sheetalshevalkar/test-project:ms1-latest",
             "cpu": 0,
             "portMappings": [
                 {
@@ -22,21 +21,8 @@
             "ulimits": []
         }
     ],
-    "family": "backend-ms1-taskdef",
     "executionRoleArn": "arn:aws:iam::651622532734:role/ecsTaskExecutionRole",
     "networkMode": "bridge",
-    "revision": 1,
-    "volumes": [],
-    "status": "ACTIVE",
-    "requiresAttributes": [
-        {
-            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.18"
-        }
-    ],
-    "placementConstraints": [],
-    "compatibilities": [
-        "EC2"
-    ],
     "requiresCompatibilities": [
         "EC2"
     ],
@@ -45,8 +31,5 @@
     "runtimePlatform": {
         "cpuArchitecture": "X86_64",
         "operatingSystemFamily": "LINUX"
-    },
-    "registeredAt": "2023-06-05T11:01:23.860Z",
-    "registeredBy": "arn:aws:iam::651622532734:root",
-    "tags": []
+    }
 }
