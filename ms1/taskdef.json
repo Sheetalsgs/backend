@@ -2,7 +2,7 @@
     "containerDefinitions": [
         {
             "name": "ms1",
-            "image": "sheetalshevalkar/test-project:ms1-latest",
+            "image": "%REPOSITORY_URI%:v_%BUILD_NUMBER%",
             "cpu": 0,
             "portMappings": [
                 {
