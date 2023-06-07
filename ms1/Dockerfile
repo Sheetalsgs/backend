@@ -13,7 +13,7 @@ RUN npm install
 
 # Copy the remaining backend files to the container
 COPY . .
-COPY server.js
+COPY server.js ./
 RUN ls -a
 
 # Expose the container port
