@@ -1,0 +1,18 @@
+{
+    "family": "backend-ms2-taskdef",
+    "containerDefinitions": [
+        {
+            "image": "%REPOSITORY_URI%:v_%BUILD_NUMBER%",
+            "name": "ms2",
+            "cpu": 10,
+            "memory": 512,
+            "essential": true,
+            "portMappings": [
+                {
+                    "containerPort": 3002,
+                    "hostPort": 0
+                }
+            ]
+        }
+    ]
+}
